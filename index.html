@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA Voice Agent - Desktop Screens (1440×900) | Figma Ready</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOP WORKSPACE CONTROLLER BAR (For preview & Figma import mode)
+       ========================================================================= -->
+  <header class="workspace-top-bar">
+    <div class="workspace-brand">
+      <div class="workspace-logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+          <line x1="12" y1="19" x2="12" y2="22"></line>
+        </svg>
+      </div>
+      <div class="workspace-title-box">
+        <h1>AURA AI // VOICE AGENT</h1>
+        <span>Desktop UI Core Screens (1440×900)</span>
+      </div>
+    </div>
+
+    <!-- Screen Navigation Switcher -->
+    <nav class="screen-tabs-nav" aria-label="Screen Switcher">
+      <button class="screen-tab-btn active" data-target="screen-voice" id="tab-voice">
+        <span class="badge-num">1</span> Voice Interaction
+      </button>
+      <button class="screen-tab-btn" data-target="screen-transcription" id="tab-transcription">
+        <span class="badge-num">2</span> Live Transcription
+      </button>
+      <button class="screen-tab-btn" data-target="screen-dashboard" id="tab-dashboard">
+        <span class="badge-num">3</span> Task Execution Dashboard
+      </button>
+    </nav>
+
+    <!-- Figma Multi-Frame Toggle Action -->
+    <div class="workspace-actions">
+      <button class="btn-figma-grid" id="btn-toggle-figma-grid" title="Show all 3 screens as 1440x900 frames for 1-click HTML-to-Figma import">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="3" y1="9" x2="21" y2="9"></line>
+          <line x1="9" y1="21" x2="9" y2="9"></line>
+        </svg>
+        Figma Multi-Frame View
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN SCREENS VIEWPORT (1440×900 ARTBOARDS)
+       ========================================================================= -->
+  <main class="screens-viewport-wrapper" id="screens-wrapper">
+
+    <!-- =======================================================================
+         SCREEN 1: VOICE INTERACTION SCREEN (1440×900)
+         Featuring primary microphone button with waveform visualizer
+         ======================================================================= -->
+    <div class="artboard-label-header" id="label-screen-1">
+      <span>Frame 01 — Voice Interaction Screen</span>
+      <span class="frame-dimensions">1440 × 900 px</span>
+    </div>
+
+    <section class="desktop-screen-artboard" id="screen-voice">
+      
+      <!-- Top Navigation Bar inside Desktop Screen -->
+      <nav class="desktop-navbar">
+        <div class="nav-brand-group">
+          <div class="nav-logo-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-primary)" stroke-width="2.4">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.08M8.46 8.46a5 5 0 0 0 0 7.08"></path>
+            </svg>
+            <span class="gradient-text">AURA</span>
+          </div>
+          <span class="nav-status-pill">DESKTOP v2.5</span>
+        </div>
+
+        <!-- Three Core Sections Menu -->
+        <div class="nav-sections-menu">
+          <a class="nav-item-link active cyan-active" data-switch="screen-voice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
+            Voice Interaction
+          </a>
+          <a class="nav-item-link" data-switch="screen-transcription">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Live Transcription
+          </a>
+          <a class="nav-item-link" data-switch="screen-dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Task Dashboard
+          </a>
+        </div>
+
+        <!-- Mic Device Status & Live Meter -->
+        <div class="nav-device-status">
+          <div class="device-indicator-box">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            </svg>
+            <span>Mic: Studio Array (48kHz)</span>
+            <div class="audio-frequency-meter">
+              <div class="frequency-bar"></div>
+              <div class="frequency-bar"></div>
+              <div class="frequency-bar"></div>
+              <div class="frequency-bar"></div>
+            </div>
+          </div>
+          <div class="status-dot-pulse" title="Connected to Neural Voice Engine"></div>
+        </div>
+      </nav>
+
+      <!-- Screen Body -->
+      <div class="voice-screen-body">
+        
+        <!-- Status Pill Top Indicator -->
+        <div class="voice-status-badge-row">
+          <div class="voice-status-pill" id="voice-screen-status-pill">
+            <span class="pulse-indicator"></span>
+            <span id="voice-pill-text">Agent Ready • Click to speak</span>
+          </div>
+        </div>
+
+        <!-- Center Voice Interaction Stage -->
+        <div class="voice-center-stage">
+          
+          <!-- Wide Waveform Visualizer (Vector Elements for Figma) -->
+          <div class="waveform-visualizer-container" id="voice-waveform-box">
+            <!-- 48 Vector Wave Bars with dynamic height pattern -->
+            <div class="vector-wave-bar" style="height: 14px;"></div>
+            <div class="vector-wave-bar" style="height: 22px;"></div>
+            <div class="vector-wave-bar" style="height: 38px;"></div>
+            <div class="vector-wave-bar" style="height: 52px;"></div>
+            <div class="vector-wave-bar" style="height: 34px;"></div>
+            <div class="vector-wave-bar" style="height: 18px;"></div>
+            <div class="vector-wave-bar" style="height: 26px;"></div>
+            <div class="vector-wave-bar" style="height: 64px;"></div>
+            <div class="vector-wave-bar" style="height: 82px;"></div>
+            <div class="vector-wave-bar" style="height: 48px;"></div>
+            <div class="vector-wave-bar" style="height: 28px;"></div>
+            <div class="vector-wave-bar" style="height: 42px;"></div>
+            <div class="vector-wave-bar" style="height: 76px;"></div>
+            <div class="vector-wave-bar" style="height: 94px;"></div>
+            <div class="vector-wave-bar" style="height: 68px;"></div>
+            <div class="vector-wave-bar" style="height: 36px;"></div>
+            <div class="vector-wave-bar" style="height: 58px;"></div>
+            <div class="vector-wave-bar" style="height: 88px;"></div>
+            <div class="vector-wave-bar" style="height: 104px;"></div>
+            <div class="vector-wave-bar" style="height: 72px;"></div>
+            <div class="vector-wave-bar" style="height: 46px;"></div>
+            <div class="vector-wave-bar" style="height: 62px;"></div>
+            <div class="vector-wave-bar" style="height: 96px;"></div>
+            <div class="vector-wave-bar" style="height: 110px;"></div>
+            <div class="vector-wave-bar" style="height: 110px;"></div>
+            <div class="vector-wave-bar" style="height: 96px;"></div>
+            <div class="vector-wave-bar" style="height: 62px;"></div>
+            <div class="vector-wave-bar" style="height: 46px;"></div>
+            <div class="vector-wave-bar" style="height: 72px;"></div>
+            <div class="vector-wave-bar" style="height: 104px;"></div>
+            <div class="vector-wave-bar" style="height: 88px;"></div>
+            <div class="vector-wave-bar" style="height: 58px;"></div>
+            <div class="vector-wave-bar" style="height: 36px;"></div>
+            <div class="vector-wave-bar" style="height: 68px;"></div>
+            <div class="vector-wave-bar" style="height: 94px;"></div>
+            <div class="vector-wave-bar" style="height: 76px;"></div>
+            <div class="vector-wave-bar" style="height: 42px;"></div>
+            <div class="vector-wave-bar" style="height: 28px;"></div>
+            <div class="vector-wave-bar" style="height: 48px;"></div>
+            <div class="vector-wave-bar" style="height: 82px;"></div>
+            <div class="vector-wave-bar" style="height: 64px;"></div>
+            <div class="vector-wave-bar" style="height: 26px;"></div>
+            <div class="vector-wave-bar" style="height: 18px;"></div>
+            <div class="vector-wave-bar" style="height: 34px;"></div>
+            <div class="vector-wave-bar" style="height: 52px;"></div>
+            <div class="vector-wave-bar" style="height: 38px;"></div>
+            <div class="vector-wave-bar" style="height: 22px;"></div>
+            <div class="vector-wave-bar" style="height: 14px;"></div>
+          </div>
+
+          <!-- Centered Primary Microphone Button -->
+          <div class="mic-hero-wrapper">
+            <div class="mic-acoustic-halo halo-1"></div>
+            <div class="mic-acoustic-halo halo-2"></div>
+            <button class="primary-mic-button" id="interactive-mic-btn" aria-label="Microphone Action">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="22"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Instruction Text -->
+          <div class="voice-action-text-group">
+            <h2 class="voice-instruction-headline" id="voice-main-prompt">Click to speak</h2>
+            <p class="voice-instruction-sub" id="voice-sub-prompt">Click the microphone or press [Space] to begin speaking with the agent</p>
+          </div>
+
+          <!-- Real-Time Speech Preview Snippet Card -->
+          <div class="voice-transcript-card">
+            <div class="card-avatar-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="transcript-body-group">
+              <div class="transcript-speaker-tag">User Voice Input (Streaming)</div>
+              <div class="transcript-text-content">
+                "Search for 'Designing Data-Intensive Applications' and add to my Books Management reading list."
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick Voice Commands Row at Bottom -->
+        <div class="voice-quick-commands-bar">
+          <span class="quick-commands-label">Suggested Voice Commands</span>
+          <div class="quick-commands-row">
+            <div class="command-pill-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>"Add 'Clean Architecture' to Books Management"</span>
+            </div>
+            <div class="command-pill-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>"System: Set workspace lighting to Focus Mode"</span>
+            </div>
+            <div class="command-pill-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.08"></path></svg>
+              <span>"Summarize audio notes from morning standup"</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SCREEN 2: LIVE TRANSCRIPTION SCREEN (1440×900)
+         Chat-like interface displaying speech-to-text text conversions & agent responses
+         ======================================================================= -->
+    <div class="artboard-label-header" id="label-screen-2">
+      <span>Frame 02 — Live Transcription Screen</span>
+      <span class="frame-dimensions">1440 × 900 px</span>
+    </div>
+
+    <section class="desktop-screen-artboard" id="screen-transcription">
+      
+      <!-- Top Navigation Bar inside Desktop Screen -->
+      <nav class="desktop-navbar">
+        <div class="nav-brand-group">
+          <div class="nav-logo-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--violet-primary)" stroke-width="2.4">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.08M8.46 8.46a5 5 0 0 0 0 7.08"></path>
+            </svg>
+            <span class="gradient-text">AURA</span>
+          </div>
+          <span class="nav-status-pill">TRANSCRIPT STREAM</span>
+        </div>
+
+        <!-- Three Core Sections Menu -->
+        <div class="nav-sections-menu">
+          <a class="nav-item-link" data-switch="screen-voice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
+            Voice Interaction
+          </a>
+          <a class="nav-item-link active violet-active" data-switch="screen-transcription">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Live Transcription
+          </a>
+          <a class="nav-item-link" data-switch="screen-dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Task Dashboard
+          </a>
+        </div>
+
+        <div class="nav-device-status">
+          <div class="device-indicator-box" style="border-color: var(--violet-border); color: #c084fc;">
+            <span>Agent Speaking (TTS 24kHz)</span>
+          </div>
+          <div class="status-dot-pulse" style="background: var(--violet-primary); box-shadow: 0 0 8px var(--violet-primary);"></div>
+        </div>
+      </nav>
+
+      <!-- Live Transcription Screen Body -->
+      <div class="transcription-screen-body">
+        
+        <!-- Header row with status indicators for Processing and Speaking -->
+        <div class="transcription-header-bar">
+          <div class="transcription-title-area">
+            <h2>Live Dialogue & Speech Transcription</h2>
+            <p>Real-time speech-to-text recognition, intent synthesis, and agent response dialogue</p>
+          </div>
+
+          <div class="live-status-pill-group">
+            <div class="live-indicator-pill speaking">
+              <div class="soundwave-bars-mini">
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+              </div>
+              <span>Agent Speaking • Books Catalog Query</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dialogue Messages Stream -->
+        <div class="dialogue-messages-stream">
+          
+          <!-- Message 1: Agent Welcome (Violet) -->
+          <div class="dialogue-bubble-row">
+            <div class="dialogue-avatar-box agent">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+              </svg>
+            </div>
+            <div class="dialogue-message-card agent-card">
+              <div class="message-meta-header">
+                <span class="message-sender-name agent">Aura Agent</span>
+                <span class="message-timestamp">14:20:10</span>
+              </div>
+              <div class="message-text-body">
+                Good afternoon, Alex. I am online and listening. You can ask me to manage your books catalog, query library availability, or execute system automation actions.
+              </div>
+            </div>
+          </div>
+
+          <!-- Message 2: User Request (Cyan) -->
+          <div class="dialogue-bubble-row user-side">
+            <div class="dialogue-avatar-box user">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="dialogue-message-card user-card">
+              <div class="message-meta-header">
+                <span class="message-timestamp">14:20:45</span>
+                <span class="message-sender-name user">Alex Mercer</span>
+              </div>
+              <div class="message-text-body">
+                "Check if 'Designing Data-Intensive Applications' is available in our library, and order a hardcover copy if it's on Amazon Prime."
+              </div>
+            </div>
+          </div>
+
+          <!-- Message 3: Agent Response (Violet) -->
+          <div class="dialogue-bubble-row">
+            <div class="dialogue-avatar-box agent">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+              </svg>
+            </div>
+            <div class="dialogue-message-card agent-card">
+              <div class="message-meta-header">
+                <span class="message-sender-name agent">Aura Agent</span>
+                <span class="message-timestamp">14:20:51</span>
+              </div>
+              <div class="message-text-body">
+                I queried our digital library: 0 physical copies are checked in. However, Amazon Prime has 'Designing Data-Intensive Applications' (Hardcover) in stock for $42.50 with delivery by tomorrow 11:00 AM. Would you like me to place the order and sync it to your Books Management dashboard?
+              </div>
+            </div>
+          </div>
+
+          <!-- Message 4: User Confirmation (Cyan) -->
+          <div class="dialogue-bubble-row user-side">
+            <div class="dialogue-avatar-box user">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="dialogue-message-card user-card">
+              <div class="message-meta-header">
+                <span class="message-timestamp">14:21:02</span>
+                <span class="message-sender-name user">Alex Mercer</span>
+              </div>
+              <div class="message-text-body">
+                "Yes, please confirm the order and sync it with my Books Dashboard."
+              </div>
+            </div>
+          </div>
+
+          <!-- Processing Status Notice -->
+          <div class="processing-notice-banner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="2" x2="12" y2="6"></line>
+              <line x1="12" y1="18" x2="12" y2="22"></line>
+              <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+              <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+              <line x1="2" y1="12" x2="6" y2="12"></line>
+              <line x1="18" y1="12" x2="22" y2="12"></line>
+              <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+              <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+            </svg>
+            <span>Executing Amazon Prime 1-Click order • Adding book record to <strong>Books Management Dashboard (#TSK-7842)</strong></span>
+          </div>
+
+        </div>
+
+        <!-- Bottom Input Bar -->
+        <div class="transcription-bottom-input-bar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <input type="text" placeholder="Speak your command or type follow-up query..." value="" readonly>
+          <div class="input-mic-trigger-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            </svg>
+            Voice Stream Active
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SCREEN 3: TASK EXECUTION & DASHBOARD SCREEN (1440×900)
+         Simplified view showing tasks handled by voice agent (Books management & system actions)
+         ======================================================================= -->
+    <div class="artboard-label-header" id="label-screen-3">
+      <span>Frame 03 — Task Execution & Dashboard Screen</span>
+      <span class="frame-dimensions">1440 × 900 px</span>
+    </div>
+
+    <section class="desktop-screen-artboard" id="screen-dashboard">
+      
+      <!-- Top Navigation Bar inside Desktop Screen -->
+      <nav class="desktop-navbar">
+        <div class="nav-brand-group">
+          <div class="nav-logo-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green-completed)" stroke-width="2.4">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.08M8.46 8.46a5 5 0 0 0 0 7.08"></path>
+            </svg>
+            <span class="gradient-text">AURA</span>
+          </div>
+          <span class="nav-status-pill">OPERATIONS DASHBOARD</span>
+        </div>
+
+        <!-- Three Core Sections Menu -->
+        <div class="nav-sections-menu">
+          <a class="nav-item-link" data-switch="screen-voice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
+            Voice Interaction
+          </a>
+          <a class="nav-item-link" data-switch="screen-transcription">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Live Transcription
+          </a>
+          <a class="nav-item-link active green-active" data-switch="screen-dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Task Dashboard
+          </a>
+        </div>
+
+        <div class="nav-device-status">
+          <div class="device-indicator-box" style="border-color: var(--green-border); color: var(--green-completed);">
+            <span>Agent Operations Online</span>
+          </div>
+          <div class="status-dot-pulse"></div>
+        </div>
+      </nav>
+
+      <!-- Dashboard Screen Body -->
+      <div class="dashboard-screen-body">
+        
+        <!-- Header & Filter Group -->
+        <div class="dashboard-top-header">
+          <div class="dashboard-title-info">
+            <h2>Task Execution & Agent Operations</h2>
+            <p>Voice-automated tasks, books management queue, and system actions</p>
+          </div>
+
+          <div class="dashboard-filter-group">
+            <button class="filter-btn-pill active">All Tasks (6)</button>
+            <button class="filter-btn-pill">Books Management (3)</button>
+            <button class="filter-btn-pill">System Actions (3)</button>
+          </div>
+        </div>
+
+        <!-- 4 Metric Cards -->
+        <div class="metrics-summary-grid">
+          
+          <div class="summary-metric-card">
+            <div class="metric-data-group">
+              <h4>Books Managed</h4>
+              <div class="metric-value-number">14 Books</div>
+            </div>
+            <div class="metric-badge-icon violet">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="summary-metric-card">
+            <div class="metric-data-group">
+              <h4>System Actions</h4>
+              <div class="metric-value-number">28 Routines</div>
+            </div>
+            <div class="metric-badge-icon cyan">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+          </div>
+
+          <div class="summary-metric-card">
+            <div class="metric-data-group">
+              <h4>In Progress</h4>
+              <div class="metric-value-number">2 Tasks</div>
+            </div>
+            <div class="metric-badge-icon amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="summary-metric-card">
+            <div class="metric-data-group">
+              <h4>Completed Today</h4>
+              <div class="metric-value-number">12 Tasks</div>
+            </div>
+            <div class="metric-badge-icon green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tasks Table (Books Management & System Actions) -->
+        <div class="tasks-table-card">
+          <table class="operations-table">
+            <thead>
+              <tr>
+                <th style="width: 44%;">Task Description & Target Details</th>
+                <th style="width: 20%;">Category</th>
+                <th style="width: 18%;">Status</th>
+                <th style="width: 18%;">Time / Scheduled</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <!-- Row 1: Book Order (In progress - Amber badge) -->
+              <tr>
+                <td>
+                  <div class="task-title-cell">
+                    <div class="task-category-icon-box book-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    </div>
+                    <div>
+                      <div class="task-primary-title">Order 'Designing Data-Intensive Applications' (Hardcover)</div>
+                      <div class="task-metadata-sub">Martin Kleppmann • Amazon Prime 1-Click • Delivery Tomorrow 11 AM</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="category-badge-pill books">Books Management</span>
+                </td>
+                <td>
+                  <span class="status-pill-badge in-progress">
+                    <span class="status-dot"></span>
+                    In progress
+                  </span>
+                </td>
+                <td>
+                  <span class="table-time-text">Today, 14:21</span>
+                </td>
+              </tr>
+
+              <!-- Row 2: Audiobook Sync (Completed - Green badge) -->
+              <tr>
+                <td>
+                  <div class="task-title-cell">
+                    <div class="task-category-icon-box book-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.08"></path></svg>
+                    </div>
+                    <div>
+                      <div class="task-primary-title">Audiobook Sync: 'Steve Jobs' by Walter Isaacson</div>
+                      <div class="task-metadata-sub">Chapter 14 downloaded • 64% playback progress synced to phone</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="category-badge-pill books">Books Management</span>
+                </td>
+                <td>
+                  <span class="status-pill-badge completed">
+                    <span class="status-dot"></span>
+                    Completed
+                  </span>
+                </td>
+                <td>
+                  <span class="table-time-text">Today, 12:45</span>
+                </td>
+              </tr>
+
+              <!-- Row 3: Library Book Reservation (In progress - Amber badge) -->
+              <tr>
+                <td>
+                  <div class="task-title-cell">
+                    <div class="task-category-icon-box book-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    </div>
+                    <div>
+                      <div class="task-primary-title">Reserve 'Clean Architecture' by Robert C. Martin</div>
+                      <div class="task-metadata-sub">Hold placed at Public Tech Library • Notification on pickup ready</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="category-badge-pill books">Books Management</span>
+                </td>
+                <td>
+                  <span class="status-pill-badge in-progress">
+                    <span class="status-dot"></span>
+                    In progress
+                  </span>
+                </td>
+                <td>
+                  <span class="table-time-text">Today, 10:15</span>
+                </td>
+              </tr>
+
+              <!-- Row 4: System Action: Lighting (Completed - Green badge) -->
+              <tr>
+                <td>
+                  <div class="task-title-cell">
+                    <div class="task-category-icon-box system-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                    </div>
+                    <div>
+                      <div class="task-primary-title">System Action: Set Studio Lighting to Deep Work Focus</div>
+                      <div class="task-metadata-sub">Philips Hue 4000K 70% brightness • macOS Do Not Disturb engaged</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="category-badge-pill system">System Actions</span>
+                </td>
+                <td>
+                  <span class="status-pill-badge completed">
+                    <span class="status-dot"></span>
+                    Completed
+                  </span>
+                </td>
+                <td>
+                  <span class="table-time-text">Today, 09:30</span>
+                </td>
+              </tr>
+
+              <!-- Row 5: System Action: Backup (Completed - Green badge) -->
+              <tr>
+                <td>
+                  <div class="task-title-cell">
+                    <div class="task-category-icon-box system-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    </div>
+                    <div>
+                      <div class="task-primary-title">System Action: Backup Workspace Notes & Voice Transcripts</div>
+                      <div class="task-metadata-sub">14 audio recordings uploaded to encrypted cloud storage vault</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="category-badge-pill system">System Actions</span>
+                </td>
+                <td>
+                  <span class="status-pill-badge completed">
+                    <span class="status-dot"></span>
+                    Completed
+                  </span>
+                </td>
+                <td>
+                  <span class="table-time-text">Today, 08:00</span>
+                </td>
+              </tr>
+
+              <!-- Row 6: System Action: Calendar (Completed - Green badge) -->
+              <tr>
+                <td>
+                  <div class="task-title-cell">
+                    <div class="task-category-icon-box system-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <div>
+                      <div class="task-primary-title">System Action: Daily Calendar Briefing & Schedule Sync</div>
+                      <div class="task-metadata-sub">4 design reviews confirmed • Time-blocks adjusted for focus session</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="category-badge-pill system">System Actions</span>
+                </td>
+                <td>
+                  <span class="status-pill-badge completed">
+                    <span class="status-dot"></span>
+                    Completed
+                  </span>
+                </td>
+                <td>
+                  <span class="table-time-text">Today, 07:45</span>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         OPTIONAL MODAL DIALOG OVERLAY (Centered Modal Dialog)
+         Can be toggled or viewed inside Voice Screen
+         ======================================================================= -->
+    <div class="modal-backdrop-layer hidden" id="interactive-confirmation-modal">
+      <div class="centered-modal-card">
+        
+        <div class="modal-header-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Voice Action Authorization
+        </div>
+
+        <h3 class="modal-title-text">Confirm Book Order</h3>
+        <p class="modal-subtitle-text">
+          The agent has prepared this purchase order. Please verify the details below before authorizing execution.
+        </p>
+
+        <div class="modal-params-list">
+          <div class="param-item-row">
+            <span class="param-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              Item Title & Edition
+            </span>
+            <span class="param-value">Designing Data-Intensive Apps (Hardcover)</span>
+          </div>
+
+          <div class="param-item-row">
+            <span class="param-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              Author & Publisher
+            </span>
+            <span class="param-value">Martin Kleppmann • O'Reilly Media</span>
+          </div>
+
+          <div class="param-item-row">
+            <span class="param-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              Price & Payment Method
+            </span>
+            <span class="param-value cyan-highlight">$42.50 • Amazon Prime 1-Click</span>
+          </div>
+
+          <div class="param-item-row">
+            <span class="param-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Estimated Delivery
+            </span>
+            <span class="param-value" style="color: var(--green-completed);">Tomorrow by 11:00 AM</span>
+          </div>
+
+          <div class="param-item-row">
+            <span class="param-name">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Catalog Destination
+            </span>
+            <span class="param-value">Books Management Dashboard</span>
+          </div>
+        </div>
+
+        <div class="modal-button-actions">
+          <button class="btn-action-cancel" id="btn-cancel-modal">Cancel</button>
+          <button class="btn-action-confirm" id="btn-confirm-modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Confirm & Place Order
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
